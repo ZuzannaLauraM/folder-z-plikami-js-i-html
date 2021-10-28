@@ -13,18 +13,36 @@ function multiplication (a, b) {
 function division (a, b) {
     return a / b;
 };
-var a = document.getElementById("liczba a").value;
-var b = document.getElementById("liczba b").value;
-var operation = '-';
 
-switch (operation) {
-    case '+': console.log(addition(a, b));
-        break;
-    case '-': console.log(substraction(a, b));
-        break;
-    case '*': console.log(multiplication(a, b));
-        break;
-    case '/': console.log(division(a, b));
-        break;
-}
+    function Kalkulator(operations) {
+
+
+        var a = document.getElementById("liczba a").value;
+        var b = document.getElementById("liczba b").value;
+        var wynik;
+
+        document.getElementById("+").addEventListener("click", operations = "+");
+        document.getElementById("-").addEventListener("click", operations = "-");
+        document.getElementById("*").addEventListener("click", operations = "*");
+        document.getElementById("/").addEventListener("click", operations = "/");
+
+
+        switch (operations) {
+            case '+':
+                wynik = addition(a, b);
+                break;
+            case '-':
+                wynik = substraction(a, b);
+                break;
+            case '*':
+                wynik = multiplication(a, b);
+                break;
+            case '/':
+                wynik = division(a, b);
+                break;
+        }
+
+        document.getElementById('result').value = '= ' + wynik;
+
+    }
 

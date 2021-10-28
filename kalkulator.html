@@ -5,6 +5,7 @@
 
     <title>Kalkulator</title>
     <meta charset="utf-8">
+    <script src="kalkulator.js"></script>
 
 
 </head>
@@ -13,7 +14,7 @@
 
 <div style="text-align: center;"><h2>Kalkulator</h2></div>
 <div style="text-align: center;">
-    <form>
+    <form id="kalkulator">
         <label for="liczba a">pierwsza liczba:</label><br>
         <input type="number" id="liczba a"><br>
         <label for="liczba b">druga liczba:</label><br>
@@ -22,10 +23,10 @@
         <button type="button" id="-">-</button>
         <button type="button" id="*">*</button>
         <button type="button" id="/">/</button>
+        <input type="text" id="result" placeholder="=" disabled="disabled" />
     </form>
 </div>
 
-<script src="kalkulator.js"></script>
 </body>
 
 </html>
